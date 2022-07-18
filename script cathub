@@ -48,13 +48,11 @@ end)
 
 
 tab:Button("tp safe", "This function may not work sometimes and you can get banned reset button.", function()
-Print("star")
-while true do wait(1)
+
 local teleport_table = {
     location1 = Vector3.new(64,151,-151), -- your desired position
-    location2 = Vector3.new(34,280,302)  -- your desired position
-    location1 = Vector3.new(670,11375,1173), -- your desired position
-    location2 = Vector3.new()  -- your desired position
+   -- your desired position
+    location2 = Vector3.new(670,11375,1173) -- your desired positio  -- your desired position
 }
 
 local tween_s = game:GetService('TweenService')
@@ -74,4 +72,5 @@ function bypass_teleport(v)
 end
 
 bypass_teleport(teleport_table.location1)
-end) 
+end)
+
