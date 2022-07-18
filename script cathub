@@ -49,7 +49,7 @@ end)
 
 tab:Button("tp safe", "This function may not work sometimes and you can get banned reset button.", function()
 Print("star")
-
+while true do wait(1)
 local teleport_table = {
     location1 = Vector3.new(64,151,-151), -- your desired position
     location2 = Vector3.new(34,280,302)  -- your desired position
