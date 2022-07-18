@@ -43,5 +43,13 @@ end)
 
 tab:Label("Target")
 tab:Textbox("target", "This textbox changes your gun power, so you can kill everyone faster and easier.", true, function(t)
-print(t)
+local p1 = game.Players.LocalPlayer.Character.HumanoidRootPart
+local p2 = ""
+local pos = p1.CFrame
+
+p1.CFrame = game.Players[p2].Character.HumanoidRootPart.CFrame
+
+wait(2)
+
+p1.CFrame = pos
 end)
