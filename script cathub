@@ -1,4 +1,4 @@
-Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/fatPRO123/library/main/ui")()
 local win = Flux:Window("PREVIEW", "GUI", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 local tab = win:Tab("Tab 1", "http://www.roblox.com/asset/?id=6023426915")
 tab:Button("Kill all", "This function may not work sometimes and you can get banned.", function()
