@@ -1,5 +1,5 @@
 Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/fatPRO123/library/main/ui")()
-local win = Flux:Window("PREVIEW", "GUI", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+local win = Flux:Window("PH.script", "GUI", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 local tab = win:Tab("Tab 1", "https://cdn.icon-icons.com/icons2/1572/PNG/512/3592841-cog-gear-general-machine-office-setting-settings_107765.png")
 tab:Button("Kill all", "This function may not work sometimes and you can get banned.", function()
 Flux:Notification("Killed all players successfully!", "Alright")
