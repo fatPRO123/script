@@ -29,7 +29,7 @@ ConfigSection:CreateKeybind("Aimbot Bind", Enum.KeyCode.Unknown, false, true, fu
    print("Aimbot Active:", boolean)
 end)
 
-local ingameTab = CoastingLibrary:CreateTab("setting") -- Tab Name
+local ingameTab = CoastingLibrary:CreateTab("Main") -- Tab Name
 local MainSection = ingameTab:CreateSection("in player") -- Tab Section (1)
 local scriptSection = ingameTab:CreateSection("script in game?") -- Tab Section (2)
 --game
@@ -51,7 +51,7 @@ hubSection:CreateButton("safe zone", function() -- Button Name In Brackets
    print("Clicked")  -- Script Executed By The Button
 end)
 
-local settingTab = CoastingLibrary:CreateTab("MAIN") -- Tab Name
+local settingTab = CoastingLibrary:CreateTab("Setting") -- Tab Name
 local MainSection = settingTab:CreateSection("in player") -- Tab Section (1)
 --game
 MainSection:CreateButton("you ugy?", function() -- Button Name In Brackets
