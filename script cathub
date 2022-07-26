@@ -1,92 +1,61 @@
-Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/fatPRO123/library/main/ui")()
-local win = Flux:Window("PH.script", "GUI", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
-local tab = win:Tab("Tab 1", "https://cdn.icon-icons.com/icons2/1572/PNG/512/3592841-cog-gear-general-machine-office-setting-settings_107765.png")
-tab:Button("Kill all", "This function may not work sometimes and you can get banned.", function()
-Flux:Notification("Killed all players successfully!", "Alright")
-end)
-tab:Label("This is just a label.")
-tab:Line()
-tab:Toggle("Auto-Farm Coins", "Automatically collects coins for you!", function(t)
-print(t)
-end)
-tab:Slider("Walkspeed", "Makes your faster.", 0, 100,16,function(t)
-print(t)
-end)
-tab:Dropdown("Part to aim at", {"Torso","Head","Penis"}, function(t)
-print(t)
-end)
-tab:Colorpicker("ESP Color", Color3.fromRGB(255,1,1), function(t)
-print(t)
-end)
-tab:Textbox("Gun Power", "This textbox changes your gun power, so you can kill everyone faster and easier.", true, function(t)
-print(t)
-end)
-tab:Bind("Kill Bind", Enum.KeyCode.Q, function()
-print("Killed a random person!")
+local CoastingLibrary = loadstring(game:HttpGet("https://pastebin.com/raw/3gQQtaKX"))()
+
+-- Tabs/Section
+local TutorialTab = CoastingLibrary:CreateTab("Home") -- Tab Name
+local MainSection = TutorialTab:CreateSection("version") -- Tab Section (1)
+local ConfigSection = TutorialTab:CreateSection("abuat") -- Tab Section (2)
+
+-- Section 1
+MainSection:CreateButton("Button", function() -- Button Name In Brackets
+   print("Clicked")  -- Script Executed By The Button
 end)
 
-local tab = win:Tab("Script in game", "http://www.roblox.com/asset/?id=6022668888")
+MainSection:CreateLabel("Ok", "Just A Label") -- Label
 
-tab:Button("FREE gamepass", "This function may not work sometimes and you can get banned.", function()
-if game.CreatorType == Enum.CreatorType.User then game.Players.LocalPlayer.UserId = game.CreatorId end if game.CreatorType == Enum.CreatorType.Group then game.Players.LocalPlayer.UserId = game:GetService("GroupService"):GetGroupInfoAsync(game.CreatorId).Owner.Id end
+
+MainSection:CreateSlider("Slider", 0, 150, 50, false, function(value) -- Slider
+   print("Slider's Number: " .. value)
 end)
-tab:Button("automatic click", "This function may not work sometimes and you can get banned.", function()
 
-end) 
+ConfigSection:CreateColorPicker("Colour Picker (Not For Mobile)", Color3.fromRGB(255, 255, 255), function(color)
+   print("Field Of View Color:", color)
+end)
 
-tab:Label("Players")
+ConfigSection:CreateDropdown("DropDown?", {"DropDown1", "DropDown2"}, 1, function(option)
+   print("Type: " .. option)
+end)
 
-tab:Button("soon", "This function may not work sometimes and you can get banned.", function()
+ConfigSection:CreateKeybind("Aimbot Bind", Enum.KeyCode.Unknown, false, true, function(boolean) -- For Pc So, Lets Leave This Empty
+   print("Aimbot Active:", boolean)
+end)
 
-end) 
+local ingameTab = CoastingLibrary:CreateTab("setting") -- Tab Name
+local MainSection = ingameTab:CreateSection("in player") -- Tab Section (1)
+local scriptSection = ingameTab:CreateSection("script in game?") -- Tab Section (2)
+--game
+scriptSection:CreateButton("free gamepass", function() -- Button Name In Brackets
+   print("Clicked")  -- Script Executed By The Button
+end)
 
+--in player
 
-tab:Label("Target")
-tab:Textbox("target", "This textbox changes your gun power, so you can kill everyone faster and easier.", true, function(t)
-local p2 = "Textbox"
+scriptSection:CreateButton("⚠️⚠️", function() -- Button Name In Brackets
+   print("Clicked")  -- Script Executed By The Button
 end)
 
 
-tab:Button("tp safe", "This function may not work sometimes and you can get banned reset button.", function()
--- FE Invisible
+local HUBTab = CoastingLibrary:CreateTab("workplace") -- Tab Name
+local hubSection = HUBTab:CreateSection("teleport bypass?") -- Tab Section (1) -- Tab Section (2)
 
-Local = game:GetService('Players').LocalPlayer
-Char  = Local.Character
-touched,tpdback = true, false
-Local.CharacterAdded:connect(function(char)
-    if script.Disabled ~= true then
-        wait(.25)
-        loc = Char.HumanoidRootPart.Position
-        Char:MoveTo(box.Position + Vector3.new(0,.5,0))
-    end
+hubSection:CreateButton("safe zone", function() -- Button Name In Brackets
+   print("Clicked")  -- Script Executed By The Button
 end)
 
-box = Instance.new('Part',workspace)
-box.Anchored = true
-box.CanCollide = true
-box.Size = Vector3.new(19,6,19)
-box.Position = Vector3.new(0,10000,0)
-box.Touched:connect(function(part)
-    if (part.Parent.Name == Local.Name) then
-        if touched == false then
-            touched = true
-            function apply()
-                if script.Disabled ~= true then
-                    no = Char.HumanoidRootPart:Clone()
-                    wait(.25)
-                    Char.HumanoidRootPart:Destroy()
-                    no.Parent = Char
-                    Char:MoveTo(loc)
-                    touched = false
-                end end
-            if Char then
-                apply()
-            end
-        end
-    end
+local settingTab = CoastingLibrary:CreateTab("MAIN") -- Tab Name
+local MainSection = settingTab:CreateSection("in player") -- Tab Section (1)
+--game
+MainSection:CreateButton("you ugy?", function() -- Button Name In Brackets
+   print("Clicked")  -- Script Executed By The Button
 end)
-repeat wait() until Char
-loc = Char.HumanoidRootPart.Position
-Char:MoveTo(box.Position + Vector3.new(0,.5,0))
-end)
+
 
