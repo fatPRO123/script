@@ -1,4 +1,4 @@
-local CoastingLibrary = loadstring(game:HttpGet("https://pastebin.com/raw/3gQQtaKX"))()
+local CoastingLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/fatPRO123/library/main/ui"))()
 
 -- Tabs/Section
 local TutorialTab = CoastingLibrary:CreateTab("Home") -- Tab Name
